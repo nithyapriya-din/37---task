@@ -1,0 +1,36 @@
+const fs = require('fs');
+
+fs.mkdir('guvi',(err)=>{
+if(err){
+    console.log(err);
+}
+})
+
+
+fs.writeFile("Data.txt","hello Developer",(err)=>{
+    if(err){
+        console.log(err);
+    }
+    else{
+        console.log('complete');
+    }
+})
+
+
+fs.readFile('./Data.txt',(err,data)=>{
+    if(err){
+        console.log(err);
+    }
+    else{
+        console.log(data.toString());
+    }
+})
+
+fs.unlink('./Data.txt',(err)=>{
+    if(err){
+        console.log(err);
+    }
+    else{
+        console.log("deleted");
+    }
+})
